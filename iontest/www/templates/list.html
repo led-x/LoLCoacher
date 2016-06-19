@@ -1,0 +1,44 @@
+<img id="hubBackground" src="TeamPage.png">
+<ion-header-bar class="bar-calm"><a href="#/hub" class="back button"><i class="ion-arrow-left-c"></i></a>
+      <h1 class="title">Fractal Fox</h1>
+      <a ui-sref="login"class="logout button"><i class="icon ion-power"></i></a>
+
+</ion-header-bar>
+<!--  <ion-header-bar class="bar-light bar-subheader">
+      <input type="search"
+        placeholder="Filter contacts..."
+        ng-model="search">
+      <button ng-if="search.length"
+        class="button button-icon ion-android-close input-button"
+        ng-click="clearSearch()">
+      </button>
+    </ion-header-bar> -->
+
+
+
+<ion-content>
+
+	<ion-refresher pulling-text="Pull To Refresh" refreshing-text="loading..." on-refresh="loadChamp()">
+	</ion-refresher>
+	
+	<ion-list id="mainList">
+
+	<ion-item ng-repeat="item in data" class="item item-thumbnail-left">
+	 
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/6.11.1/img/champion/{{item.image.full}}" alt"champion image">
+<!-- 	<h2>{{post.title}}</h2>
+	<p>{{post.excerpt}}</p> -->
+	<h2 data-ng-bind-html="item.name"></h2>	
+	<p data-ng-bind-html="item.title"></p>
+	<h3>{{item.tags[0]}}, {{item.tags[1]}}</h3>
+	<a ui-sref="details({itemId:item.id})" class="button">Spells</a>
+	<a ui-sref="skins({itemId:item.id})"class="button">Skins</a>
+
+	 <!--        <ion-option-button class="button-calm" ng-click="remove(item)">
+          Delete
+        </ion-option-button> -->
+	</ion-item>
+	</ion-list>
+
+</ion-content>
+

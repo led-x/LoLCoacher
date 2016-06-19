@@ -1,0 +1,147 @@
+<img id="hubBackground" src="TeamPage.png">
+<ion-header-bar class="bar-calm">
+  <a ui-sref="hub" class="back button" ><i class="ion-arrow-left-c"></i></a>
+      <h1 class="title">Fractal Fox</h1>
+      <a ui-sref="login"class="logout button"><i class="icon ion-power"></i></a>
+
+</ion-header-bar>
+
+<ion-content class="padding">
+	<!-- <ion-refresher pulling-text="Pull To Refresh" refreshing-text="loading..." on-refresh="loadChamp()">
+	</ion-refresher> -->
+
+	<!-- <h1 class="Sname">Lemon Beard<h1> -->
+    <!-- <h1 id="Sname"><a href="#/summoner/{{data.id}}">Lemon Beardy</a><h1> -->
+  
+
+  <div class="row">
+    <div class="col mh" id="playerItem"><h2>Match 1</h2>
+      <button class="button icon ion-arrow-down-b" ng-click="mustShow = ! mustShow" ></button></div>
+  </div>
+  <div ng-show="mustShow" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="matches in data">
+        <div ng-repeat="match in matches | orderBy :'-match.match.timestamp' | limitTo: 2 track by (match.matchId)" ng-if="$index > 0">
+
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[match.champion].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[match.champion].key}}</h3>
+          </div>  
+          <p>{{match.timestamp}}</p>
+          <br><p>{{match.matchId}}</p>      
+      <!-- <div class="col col-50" id="left">       
+         <p>Games Played: {{champion.stats.totalSessionsPlayed}}<br>
+          W: {{champion.stats.totalSessionsWon}} - L: {{champion.stats.totalSessionsLost}}</p>  </div> --><!-- <br><p> K\D\A:
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalAssists)}}</p>  -->    
+        </div></div>
+      </div>
+   </div>
+</div>
+
+<!-- START OF LIST AT MATCH 2 -->
+
+ <!--  <div class="row">
+    <div class="col mh" id="playerItem"><h2>Match 2</h2>
+      <button class="button icon ion-arrow-down-b" ng-click="mustShow1 = ! mustShow1" ></button></div>
+  </div>
+  <div ng-show="mustShow1" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="matches in data">
+        <div ng-repeat="match in matches | orderBy :'-match.timestamp' | limitTo: 3 track by (match.matchId)" ng-if="$index > 1">
+
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[match.champion].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[match.champion].key}}</h3>
+          </div>   
+          <p>{{match.timestamp}}</p>        
+        </div></div>
+      </div>
+   </div>
+</div>
+
+ <div class="row">
+    <div class="col mh" id="playerItem"><h2>Match 3</h2>
+      <button class="button icon ion-arrow-down-b" ng-click="mustShow2 = ! mustShow2" ></button></div>
+  </div>
+  <div ng-show="mustShow2" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="matches in data">
+        <div ng-repeat="match in matches | orderBy :'-match.timestamp' | limitTo: 4 track by (match.matchId)" ng-if="$index > 2">
+
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[match.champion].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[match.champion].key}}</h3>
+          </div>
+          <p>{{match.timestamp}}</p>           
+        </div></div>
+      </div>
+   </div>
+</div>
+
+ <div class="row">
+    <div class="col mh" id="playerItem"><h2>Match 4</h2>
+      <button class="button icon ion-arrow-down-b" ng-click="mustShow3 = ! mustShow3" ></button></div>
+  </div>
+  <div ng-show="mustShow3" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="matches in data">
+        <div ng-repeat="match in matches | orderBy :'-match.timestamp' | limitTo: 5 track by (match.matchId)" ng-if="$index > 3">
+
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[match.champion].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[match.champion].key}}</h3>
+          </div>   
+          <p>{{match.timestamp}}</p>        
+        </div></div>
+      </div>
+   </div>
+</div>
+
+ <div class="row">
+    <div class="col mh" id="playerItem"><h2>Match 5</h2>
+      <button class="button icon ion-arrow-down-b" ng-click="mustShow4 = ! mustShow4" ></button></div>
+  </div>
+  <div ng-show="mustShow4" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="matches in data">
+        <div ng-repeat="match in matches | orderBy :'-match.timestamp' | limitTo: 6 track by (match.matchId)" ng-if="$index > 4">
+
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[match.champion].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[match.champion].key}}</h3>
+          </div>   
+          <p>{{match.timestamp}}</p><br>
+          <p>{{match.matchId}}</p>        
+        </div></div>
+      </div>
+   </div>
+</div> -->
+
+
+<!-- END OF LIST -->
+
+
+
+	 <!--        <ion-option-button class="button-calm" ng-click="remove(item)">
+          Delete
+        </ion-option-button> -->
+<!-- 	</ion-item>
+	</ion-list> -->
+
+<!-- <div class="card">
+   <div class="item">
+      This is a Ionic card without item-text-wrap class.
+   </div>  
+</div>
+<div class="item item-text-wrap">
+      This is a Ionic card with item-text-wrap class.
+   </div> -->
+</ion-content>
+

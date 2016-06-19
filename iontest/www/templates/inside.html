@@ -1,0 +1,58 @@
+<!-- <ion-view>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <h1 class="title">Member area</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="logout()">Logout</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="card">
+      <div class="item item-text-wrap">
+        {{memberinfo}}
+        
+      </div>
+    </div>
+    <button class="button button-full button-assertive" ng-click="destroySession()">
+      Destroy token
+    </button>HELLO
+    <button class="button button-full button-balanced" ng-click="getInfo()">
+      Get Memberinfo
+    </button>
+  </ion-content>
+</ion-view> -->
+
+<img id="hubBackground" src="TeamPage.png">
+<ion-header-bar class="bar-calm">
+      <h1 class="title">WhoStoleMyLemon</h1>
+    <div class="buttons">
+      <button class="logout button" ng-click="logout()"><i class="icon ion-power"></i></button>
+    </div>
+
+</ion-header-bar>
+
+<ion-content class="padding">
+  <!-- <ion-refresher pulling-text="Pull To Refresh" refreshing-text="loading..." on-refresh="loadChamp()">
+  </ion-refresher> -->
+
+  <h1 class="Sname" ng-model="summonerName">{{data.name}} - {{data.role}}<h1>
+    
+<div class="row">
+  <div class="col" id="hubItem"><h2>Players</h2><a ui-sref="players">
+    <i class = "icon ion-ios-people"></i></a></div>
+
+  <div class="col" id="hubItem"><h2>Schedule</h2><a ui-sref="list">
+    <i class = "icon ion-ios-timer-outline"></i></a></div>
+  
+</div>
+
+<div class="row row-center">
+<!-- <a href="#/hub"class="button">Login</a> -->
+
+  <div class="col" id="hubItem"><h2>Team Comps</h2><a ui-sref="teamcomp"><i class="icon ion-grid"></i></a></div>
+  <div class="col" id="hubItem"><h2>Champions</h2><a ui-sref="list"><img class="icon champion"src="championicon.png"></a></div>
+</div>
+<div class="row row-bottom">
+  <div class="col" id="hubItem"><h2>Match History</h2><a ui-sref="matchhistory"><i class="icon ion-arrow-graph-up-right"></i></a></div>
+  <div class="col" id="hubItem"><h2>Map</h2><a ui-sref="map"><i class = "icon ion-map"></i></a></div>
+</div>
+</ion-content>

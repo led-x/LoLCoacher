@@ -1,0 +1,47 @@
+<img id="hubBackground" src="SplashArray.png">
+<!-- <ion-header-bar class="bar-calm">
+      <h1 class="title">LoL Coacher</h1>
+
+</ion-header-bar> -->
+
+<ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+  <a ui-sref="outside.login" class="back button" ng-click="myGoBack"><i class="ion-arrow-left-c"></i></a>
+<h1 class="Sname" id="create"> Create a Team </h1>
+
+
+<!-- <div class="list">
+  <label class="item item-input">
+    <input type="text" placeholder="Summoner Name">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Password">
+  </label>
+</div> -->
+
+      <div class="list list-inset">
+          <label  class="loginItem item item-input">
+              <input type="text" placeholder="Team Name" ng-model="team.name">
+          </label>
+      </div>
+       <div class="list">
+
+                <label  class="item item-input item-select">
+                    <div class="input-label">
+                        &nbsp;
+                    </div>
+                    <select ng-model="team.name" >
+                        <option ng-repeat="team in Tdata">{{team.name}}</option>
+
+                    </select>
+                </label>
+
+            </div>
+      <a ui-sref="hub"class="create button" ng-click="addTeam()">Create</a>
+      <a ui-sref="hub"class="create button">Skip</a>
+      <!-- <button class="button button-block button-calm" ng-click="login()">Login</button> -->
+  </ion-content>
+</ion-view>
+<!-- <ion-footer-bar class="bar-stable">
+
+</ion-footer-bar> -->

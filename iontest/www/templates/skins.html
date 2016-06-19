@@ -1,0 +1,53 @@
+<img id="hubBackground" src="TeamPage.png">
+<ion-header-bar class="bar-calm">
+<a ui-sref="hub" class="back button"><i class="ion-arrow-left-c"></i></a>
+	<h1 class="title">Champion Skin Info</h1>
+</ion-header-bar>	
+
+
+
+<ion-content id="mainPost" class"padding">
+<h2 data-ng-bind-html="item.title"></h2>
+
+<ion-item id="detailsChampions" class="item item-divider">
+	 <ion-delete-button class="ion-minus-circled"></ion-delete-button>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_0.jpg" class="image" alt"champion image">
+	<h1 data-ng-bind-html="data.name" class="titleChamp"></h1>
+	<h1 data-ng-bind-html="data.title" class="titleChamp"></h1>
+	
+	<!-- <h3>{{data.name}}</h3> -->
+	<br><h3 class="titleChamp">{{data.skins[1].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_1.jpg" class="image" alt"skin1">
+
+	<br><h3 class="titleChamp">{{data.skins[2].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_2.jpg" class="image" alt"skin2">
+	
+	<br><h3 class="titleChamp">{{data.skins[3].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_3.jpg" id="image" alt"skin3">
+	
+<!-- 	<br><h3 class="titleChamp">{{data.skins[4].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_4.jpg" id="image" alt"skin4">
+
+	<br><h3 class="titleChamp">{{data.skins[5].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_5.jpg" id="image" alt"skin5">
+
+	<br><h3 class="titleChamp">{{data.skins[6].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_6.jpg" id="image" alt"skin6">
+
+	<br><h3 class="titleChamp">{{data.skins[7].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_7.jpg" id="image" alt"skin7">
+
+	<br><h3 class="titleChamp">{{data.skins[8].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_8.jpg" id="image" alt"skin8">
+
+	<br><h3 class="titleChamp">{{data.skins[9].name}}</h3>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.key}}_9.jpg" id="image" alt"skin9"> -->
+	</ion-item>
+
+</ion-content>
+
+<!-- <ion-footer-bar class"bar-stable">
+	<button id="backbutton" class="button button-calm icon-left ion-ios-list-outline" ng-click="goHome()">
+	Back to Champions
+	</button>
+</ion-footer-bar> -->

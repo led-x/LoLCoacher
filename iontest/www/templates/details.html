@@ -1,0 +1,54 @@
+<img id="hubBackground" src="TeamPage.png">
+<ion-header-bar class="bar-calm">
+<a ui-sref="list" class="back button"><i class="ion-arrow-left-c"></i></a>
+	<h1 class="title">Champion Spell Info</h1>
+</ion-header-bar>	
+
+
+
+<ion-content id="mainPost" class"padding">
+<h2 data-ng-bind-html="item.title"></h2>
+
+<ion-item id="detailsChampions" class="item-text-wrap item-divider">
+	 <ion-delete-button class="ion-minus-circled"></ion-delete-button>
+	<img data-ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{data.name}}_0.jpg" class="image" alt"champion image">
+	<h1 data-ng-bind-html="data.name" class="titleChamp"></h1>
+	<h1 data-ng-bind-html="data.title" class="titleChamp"></h1>
+	
+	<!-- <h3>{{data.name}}</h3> -->
+	<br><h3 class="titleChamp">{{data.spells[0].name}}</h3>
+	<span>Q</span><img data-ng-src="http://ddragon.leagueoflegends.com/cdn/6.11.1/img/spell/{{data.spells[0].image.full}}" id="image" alt"champion spellQ">
+	<br><p>{{data.spells[0].description}}</p>
+	<p>Cost: {{data.spells[0].costBurn}}</p>
+	<p>Cooldown: {{data.spells[0].cooldownBurn}}</p><br>
+
+	<h3 class="titleChamp">{{data.spells[1].name}}</h3>
+	<span>W</span><img data-ng-src="http://ddragon.leagueoflegends.com/cdn/6.11.1/img/spell/{{data.spells[1].image.full}}" id="image" alt"champion spellW">
+	<br><p>{{data.spells[1].description}}</p>
+	<p>Cooldown: {{data.spells[1].cooldownBurn}}</p><br>
+	
+	<h3 class="titleChamp">{{data.spells[2].name}}</h3>
+	<span>E</span><img data-ng-src="http://ddragon.leagueoflegends.com/cdn/6.11.1/img/spell/{{data.spells[2].image.full}}" id="image" alt"champion spellE">
+	<br><p>{{data.spells[2].description}}</p>
+	<p>Cooldown: {{data.spells[2].cooldownBurn}}</p><br>
+	
+	<h3 class="titleChamp">{{data.spells[3].name}}</h3>
+	<span>R</span><img data-ng-src="http://ddragon.leagueoflegends.com/cdn/6.11.1/img/spell/{{data.spells[3].image.full}}" id="image" alt"champion spellR">
+	<br><p>{{data.spells[3].description}}</p>
+	<p>Cooldown: {{data.spells[3].cooldownBurn}}</p><br>
+<!-- 	<p>{{data.spells[0].image.}}</p> -->
+	<!-- <a href="#/details/{{$index}}">Spells</a> -->
+	 <!--        <ion-option-button class="button-calm" ng-click="remove(item)">
+          Delete
+        </ion-option-button> -->
+	</ion-item>
+
+
+<p data-ng-bind-html="spells"></p>	
+</ion-content>
+
+<!-- <ion-footer-bar class="bar-stable">
+	<button id="backbutton" class="button button-calm icon-left ion-ios-list-outline" ng-click="goHome()">
+	Back to Champions
+	</button>
+</ion-footer-bar> -->

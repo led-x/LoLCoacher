@@ -1,0 +1,30 @@
+<img id="hubBackground" src="TeamPage.png">
+    <ion-pane>
+      <ion-header-bar class='bar-calm'><a ui-sref="hub" class="back button" ><i class="ion-arrow-left-c"></i></a>
+        <h1 class='title'>Summoner's Rift</h1>
+      </ion-header-bar>
+
+ 
+      <ion-content class='has-header padding' scroll='false'>
+      <h1 class="Sname" id="players">Draw up your Strategy!<h1>
+      <div class="wrapper">
+      <img src="s-rift.jpg" width='361' height='316' />
+          <canvas id='signatureCanvas' class='signatureCanvas' width='360' height='315' style='border: 1px solid black;'></canvas><br>
+          <div class='button-bar'>
+              <a class='create button' ng-click='clearCanvas()'>Clear</a>
+              <a class='create button' ng-click='saveCanvas()'>Save</a>
+          </div>
+          <div class="colours">
+          <button class="button red" style='background-color:red;' ng-click='makeRed()'>red</button>
+          <button class="button"  style='background-color:blue;'ng-click='makeBlue()'>blue</button>
+          <button class="button" style='background-color:green;' ng-click='makeGreen()'>green</button>
+          <button class="button" style='background-color:white; color:black;' ng-click='makeWhite()'>white</button>
+        </div>
+      </div>
+          
+      </ion-content>
+    </ion-pane>
+
+
+
+

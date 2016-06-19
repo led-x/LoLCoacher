@@ -1,0 +1,46 @@
+<img id="hubBackground" src="SplashArray.png">
+
+<ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+<a ui-sref="outside.login" class="back button" ng-click="myGoBack"><i class="ion-arrow-left-c"></i></a>
+<h1 class="Sname" id="create"> Register Your Summoner name</h1><br>
+
+
+      <div class="list list-inset">
+          <label  class="loginItem item item-input">
+              <input type="text" placeholder="Summoner Name" ng-model="user.name">
+          </label>
+          <label class="loginItem item item-input">
+              <input type="password" placeholder="Password" ng-model="user.password">
+          </label>
+          <label class="loginItem item item-input">
+        <input type="text" placeholder="Role" ng-model="user.role">
+      </label>
+      <h1 class="Sname" id="desc">*The password does not have to be your LoL password but your username must match your in game summoner name to retrieve your information.</h1>
+      </div>
+      <a ui-sref="login"class="create button" ng-click="signup()">Register</a>
+      <!-- <button class="button button-block button-calm" ng-click="login()">Login</button> -->
+  </ion-content>
+</ion-view>
+
+<!-- ded -->
+
+<!-- <ion-view title="Create a new account">
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Name" ng-model="user.name">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="user.password">
+      </label>
+            <label class="item item-input">
+        <input type="text" placeholder="role" ng-model="user.role">
+      </label>
+    </div>
+    <button class="button button-full button-positive" ng-click="signup()">
+      Sign up
+    </button>
+  </ion-content>
+</ion-view>
+ -->

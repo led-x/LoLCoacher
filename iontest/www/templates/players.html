@@ -1,0 +1,157 @@
+<img id="hubBackground" src="TeamPage.png">
+<ion-header-bar class="bar-calm"><a ui-sref="hub" class="back button"><i class="ion-arrow-left-c"></i></a>
+      <h1 class="title">WhoStoleMyLemon</h1>
+      <a ui-sref="login"class="logout button"><i class="icon ion-power"></i></a>
+
+      
+
+</ion-header-bar>
+
+<ion-content class="padding">
+	<!-- <ion-refresher pulling-text="Pull To Refresh" refreshing-text="loading..." on-refresh="loadChamp()">
+	</ion-refresher> -->
+
+	<!-- <h1 class="Sname">Lemon Beard<h1> -->
+    <!-- <h1 id="Sname"><a href="#/summoner/{{data.id}}">Lemon Beardy</a><h1> -->
+  <h1 class="Sname" id="players">Players<h1>
+  <div class="row">
+    <div class="col" id="playerItem"> 
+  <h2>{{Pdata.name}} - {{Pdata.role}}</h2><button class="button icon ion-arrow-down-b" ng-click="mustShow = ! mustShow" ></button>  
+  </div>
+</div>
+
+  
+<div ng-show="mustShow" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="champions in data">
+        <div ng-repeat="champion in champions | orderBy :'-stats.totalSessionsPlayed' | limitTo: 4 track by (champion.id)"  ng-if="$index > 0">
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[champion.id].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[champion.id].name}}</h3>
+          </div>       
+      <div class="col col-50" id="left">       
+         <p>Games Played: {{champion.stats.totalSessionsPlayed}}<br>
+          W: {{champion.stats.totalSessionsWon}} - L: {{champion.stats.totalSessionsLost}}</p>  </div><!-- <br><p> K\D\A:
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalAssists)}}</p>  -->    
+        </div></div>
+      </div>
+   </div>
+</div>
+
+  <div class="row">
+    <div class="col" id="playerItem"> 
+  <h2>Maradoc - ADC</h2><button class="button icon ion-arrow-down-b" ng-click="mustShow1 = ! mustShow1"></button>
+    
+  </div>
+</div>
+<div ng-show="mustShow1" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="champions in Maradoc">
+        <div ng-repeat="champion in champions | orderBy :'-stats.totalSessionsPlayed' | limitTo: 4 track by (champion.id)"  ng-if="$index > 0">
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[champion.id].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[champion.id].name}}</h3>
+          </div>       
+      <div class="col col-50" id="left">       
+         <p>Games Played: {{champion.stats.totalSessionsPlayed}}<br>
+          W: {{champion.stats.totalSessionsWon}} - L: {{champion.stats.totalSessionsLost}}</p>  </div><!-- <br><p> K\D\A:
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalAssists)}}</p>  -->    
+        </div></div>
+      </div>
+   </div>
+</div>
+
+  <div class="row">
+    <div class="col" id="playerItem"> 
+  <h2>Carzie - Support</h2>
+    <button class="button icon ion-arrow-down-b" ng-click="mustShow2 = ! mustShow2"></button>
+    
+  </div>
+</div>
+<div ng-show="mustShow2" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="champions in carzie">
+        <div ng-repeat="champion in champions | orderBy :'-stats.totalSessionsPlayed' | limitTo: 4 track by (champion.id)"  ng-if="$index > 0">
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[champion.id].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[champion.id].name}}</h3>
+          </div>       
+      <div class="col col-50" id="left">       
+         <p>Games Played: {{champion.stats.totalSessionsPlayed}}<br>
+          W: {{champion.stats.totalSessionsWon}} - L: {{champion.stats.totalSessionsLost}}</p>  </div><!-- <br><p> K\D\A:
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalAssists)}}</p>  -->    
+        </div></div>
+      </div>
+   </div>
+</div>
+
+    <div class="row">
+    <div class="col" id="playerItem"> 
+  <h2>MarK Akitaki - Jungle</h2>
+    <button class="button icon ion-arrow-down-b" ng-click="mustShow3 = ! mustShow3"></button>
+    
+  </div>
+</div>
+
+<div ng-show="mustShow3" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="champions in griz">
+        <div ng-repeat="champion in champions | orderBy :'-stats.totalSessionsPlayed' | limitTo: 4 track by (champion.id)"  ng-if="$index > 0">
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[champion.id].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[champion.id].name}}</h3>
+          </div>       
+      <div class="col col-50" id="left">       
+         <p>Games Played: {{champion.stats.totalSessionsPlayed}}<br>
+          W: {{champion.stats.totalSessionsWon}} - L: {{champion.stats.totalSessionsLost}}</p>  </div><!-- <br><p> K\D\A:
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalAssists)}}</p>  -->    
+        </div></div>
+      </div>
+   </div>
+</div>
+
+    <div class="row">
+    <div class="col" id="playerItem"> 
+  <h2>Dyrus - Top</h2>
+    <button class="button icon ion-arrow-down-b" ng-click="mustShow4 = ! mustShow4"></button>
+  
+  </div>
+</div>
+
+<div ng-show="mustShow4" id="detail" class="row row-center">
+  <div class="col" id="playerItemDetails"><br>
+    <div ng-repeat="champions in dyrus">
+        <div ng-repeat="champion in champions | orderBy :'-stats.totalSessionsPlayed' | limitTo: 4 track by (champion.id)"  ng-if="$index > 0">
+          <div class="row">
+<div class="col col-50" id="left">
+  <img class="champs" src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/{{Cdata.data[champion.id].key}}.png" alt"champion image">
+          <h3 class="champname">{{Cdata.data[champion.id].name}}</h3>
+          </div>       
+      <div class="col col-50" id="left">       
+         <p>Games Played: {{champion.stats.totalSessionsPlayed}}<br>
+          W: {{champion.stats.totalSessionsWon}} - L: {{champion.stats.totalSessionsLost}}</p>  </div><!-- <br><p> K\D\A:
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalChampionKills)}}\
+                {{Average(champion.stats.totalAssists)}}</p>  -->    
+        </div></div>
+      </div>
+   </div>
+</div>
+
+
+
+</ion-content>
+
+</ion-footer-bar> 
