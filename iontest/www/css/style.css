@@ -1,0 +1,352 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: 'Friz Quadrata TT';
+    src: url(ufonts.com_friz-quadrata-tt.ttf) format("truetype");
+}
+
+.hidden 
+{
+display: none;
+}
+.wrapper{
+    padding-top: 10px;
+}
+
+.wrapper #signatureCanvas.signatureCanvas{
+    display:block;
+    margin-left:auto;
+    margin-left:auto;
+}
+.wrapper img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    position:fixed; 
+    z-index:-1;
+
+}
+
+#signatureCanvas{
+    margin:auto;
+}
+
+.colours{
+    padding-top: 10px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h2{
+    color:white;
+    font-family: 'Friz Quadrata TT';
+}
+.Sname{
+    text-align: center;
+    /*background-color: rgba(3,51,58,0.7);*/
+    color:white;
+    margin:10px;
+      font-family: 'Friz Quadrata TT';
+}
+.Sname#create{
+    text-align: center;
+    /*background-color: rgba(3,51,58,0.7);*/
+    color:white;
+    margin:10px;
+    padding:75px 0 70px 0;
+    font-family: 'Friz Quadrata TT';
+    font-size: 40px;
+}
+.Sname#desc{
+    float:left;
+    font-family: 'Friz Quadrata TT';
+    font-size: 14px;
+    font-style: italic;
+}
+.Sname#players{
+margin-bottom:0;
+
+}
+
+.champs{
+    max-height:60px;
+    max-width: 60px;
+    float:left;
+    margin: -16px 0 0 5px;
+}
+.champsTC{
+    display:inline;
+    max-height:40px;
+    max-width: 40px;
+    margin: -24px 14px -12px 0px;
+
+}
+.contTC{
+    border:black;
+}
+#image{
+	display: block;
+    margin-left:auto;
+    margin-right:auto; 
+}
+.image{
+        display: block;
+    margin-left:17px;
+    margin-right:auto;
+}
+#logo{
+    height:240px;
+    width: 270px;
+    display:block;
+    margin:auto;
+    margin-bottom: 40px;
+
+}
+
+#backbutton{
+	display: block;
+    margin: 0px auto;
+    padding: 0 75px 0 75px;
+}
+/*HUB ITEMS*/
+#hubBackground{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    margin: auto;
+    z-index: -2;
+    position: fixed;
+}
+#hubItem{
+    background-color: rgba(3,51,58,0.7);
+    margin: 5px;
+}
+#hubItem h2{
+    font-size: 20px;
+}
+.icon.ion-arrow-down-b{
+    float:right;
+    font-size: 40px;
+    color:white;
+}
+.icon.ion-arrow-left-c{
+    padding-bottom: 5px;
+}
+
+#hubItem .icon{
+    font-size: 50px;
+    color:white;
+}
+#hubItem .icon.champion{
+    margin-top: -5px;
+    height: 58px;
+    width: 58px;
+}
+
+/*PLAYERS ITEMS*/
+#playerItem{
+    background-color: rgba(3,51,58,0.7);
+    margin: 20px 5px 5px 5px;
+}
+#playerItem h2, #playerItemDetails h2{
+    font-size: 20px;
+    float:left;
+    padding-top:17px;
+}
+
+#playerItemDetails p{
+    float:left;
+    color:white;
+    text-align: inherit;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+#playerItemDetails{
+   background-color: rgba(11,69,86,0.5);
+   margin: -25px 5px 5px 5px; 
+   border-left: 1px rgba(255,255,255,0.7) solid;
+   border-right: 1px rgba(255,255,255,0.7) solid;
+   border-bottom:1px rgba(255,255,255,0.7) solid;
+}
+
+#detail{
+    width:95%;
+    margin:-5px auto;
+}
+.champname{
+    font-size: 14px;
+    color:white;
+    display: block;
+    float:left;
+    margin-top: -15px;
+    margin-left: 5px;
+}
+#left{
+    float:left;
+}
+.titleChamp
+{
+	text-align: center;
+    color:white;
+}
+
+.col
+{text-align: center;
+ font-color:white;
+}
+.col.mh{
+    border:2px solid white;
+}
+.col.tc{
+    margin:0 -3px 0 0;
+}
+.pane, .login
+{
+background-color: rgba(0,0,0,0);
+}
+/*BUTTONS*/
+.button{
+	background-color: rgba(3,51,58,0.7);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+    display: inline-block;
+}
+.logout.button{
+    background-color: rgba(3,51,58,0.7);
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    width:40px;
+    margin:1px;
+    display: inline-block;
+}
+
+.back.button{
+    background-color: rgba(3,51,58,0);
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    width:40px;
+display:block;
+    font-family: 'Friz Quadrata TT';
+}
+.bar .button{
+    margin-top:2px;
+}
+.bar .title + .button:last-child{
+    top:3px;
+}
+.login.button{
+    background-color: rgba(3,51,58,0.7);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 34px;
+    width:140px;
+    float: left;
+    margin:5px;
+    display: inline-block;
+    border: 1px solid;
+    padding-bottom:8px;
+}
+.create.button{
+    background-color: rgba(3,51,58,0.7);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    width:180px;
+    margin: auto;
+    display: block;
+    border: 1px solid;
+    padding-bottom:6px;
+}
+
+
+.bar.bar-calm,
+.button.button-calm{
+    background-color: rgba(3,51,58,0.7);
+    border:none;
+    background-image:none;
+}
+.bar .title{
+    font-size: 24px;
+}
+.loginItem.item{
+    background-color: rgba(3,51,58,0.7);
+    border-color: white;
+
+}
+.list-inset{
+    background-color: transparent;
+
+}
+.list-inset, input[type="text"],input[type="password"]{
+    color:white;
+    font-family: "Friz Quadrata TT";
+}
+.item-input-wrapper{
+        background-color: rgba(3,51,58,0.7);
+    border-color: white;
+    font-family: "Friz Quadrata TT";
+
+}
+.loginButton{
+    margin:0 auto;
+    display:block;
+    width: 300px;
+}
+
+.item-complex .item-content,
+.item-radio .item-content{
+background-color: rgba(3,51,58,0.7);
+margin:0;
+}
+.item{
+    background-color:transparent;
+}
+.item p
+{
+    color: white;
+}
+.item.item-input.item-select{
+ background-color: rgba(3,51,58,1); 
+}
+#mainList
+{
+	background-color: #632342;
+}
+
+.full-width {
+  width: 100%;
+}
+option {
+    width: 336px;
+    float:left;
+    color:white;
+    font-family: "Friz Quadrata TT";
+    max-width: 100%;
+}
+.item-select select{
+    background-color: rgba(3,51,58,1);
+    max-width: 100%;
+    padding:0 130px 0 4px;
+    color:white;
+    font-family: "Friz Quadrata TT";
+    font-size: 20px;
+    text-align: left;
+}
+.row {
+    padding: 5px 0 25px 5px
+}
+
+span {
+	font-size: 3em;
+    color:white;
+}
