@@ -122,23 +122,29 @@ angular.module('ChampApp')
   // $scope.loadChamp();
 }]);
 
-ChampApp.controller('DetailsController',['$scope','$http', 'AuthService', 'API_ENDPOINT','$stateParams', '$ionicLoading' ,function($scope,$http, AuthService, API_ENDPOINT, $stateParams, $ionicLoading)
-{
-  $ionicLoading.show();
-    //  $http.get(API_ENDPOINT.url + '/champions/:id').then(function(result) {
-    //   $scope.data = result.data;
+ChampApp.controller('DetailsController',['$scope','$http', 'AuthService', 'API_ENDPOINT','$stateParams', '$ionicLoading' ,function($scope,$http, AuthService, API_ENDPOINT, $stateParams, $ionicLoading){
+  // $ionicLoading.show();
+    //  $http.get(API_ENDPOINT.url + '/champions').then(function(result) {
+    //   $scope.data = result.data.data;
+    //   // console.log($scope.data.Aatrox);
     // });
+
+     $http.get(API_ENDPOINT.url + '/champions/:id').then(function(result) {
+      $scope.data = result;
+      console.log(result);
+      // console.log($scope.champions);
+    });
 
    $ionicLoading.hide();
 
-   $http.post('/championDetails', {
-    msg: $scope.championId,
-   })
-   .success(function(response){
-    $scope.data = response;
-    console.log(response);
-    console.log($scope.data);
-   })
+   // $http.get('/champions/:id', {
+   //  msg: $scope.championId,
+   // })
+   // .success(function(response){
+   //  $scope.data = response.data;
+   //  console.log(response);
+   //  console.log($scope.data);
+   // })
  
    
 
