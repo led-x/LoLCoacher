@@ -22,7 +22,7 @@ router.get('/champions', function(req,res,next){
 });
 
 router.get('/champions/:id', function(req,res,next){
-  request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+id+"?champData=all&api_key=eb771b4e-dfa1-4e6f-a039-226552a84b6e" ,function(error,response,body){
+  request("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+req.params.id+"?champData=all&api_key=eb771b4e-dfa1-4e6f-a039-226552a84b6e" ,function(error,response,body){
     var data = JSON.parse(body);
     res.json(data);
   });
